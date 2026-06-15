@@ -1,4 +1,3 @@
-# 공통 home-manager (모든 호스트 공유): 셸/에디터/브라우저
 { pkgs, ... }: {
   home.username = "crix";
   home.homeDirectory = "/home/crix";
@@ -31,14 +30,4 @@
   };
 
   programs.chromium.enable = true;
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      "text/html" = "chromium-browser.desktop";
-      "x-scheme-handler/http" = "chromium-browser.desktop";
-      "x-scheme-handler/https" = "chromium-browser.desktop";
-      "x-scheme-handler/about" = "chromium-browser.desktop";
-      "x-scheme-handler/unknown" = "chromium-browser.desktop";
-    };
-  };  
 }
