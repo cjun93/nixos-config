@@ -9,7 +9,7 @@
     ../../modules/i18n.nix
     ../../modules/users.nix
     ../../modules/thunar.nix
-    # ./desktop.nix   # XFCE 확정 후 작성하여 활성화
+    ./desktop.nix   # XFCE 확정 후 작성하여 활성화
   ];
 
   networking.hostName = "lakebook";
