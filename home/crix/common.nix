@@ -14,6 +14,9 @@
   programs.emacs = {
     enable = true;
     package = pkgs.emacs-pgtk;
+    extraConfig = ''
+      (setq make-backup-files nil)
+    '';
     extraPackages = epkgs: with epkgs; [
       nix-mode
     ];
