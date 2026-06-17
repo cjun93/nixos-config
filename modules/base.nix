@@ -1,4 +1,3 @@
-# 공통 기본 (nix 설정, 시스템 패키지, 펌웨어 등)
 { pkgs, ... }:
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -12,6 +11,7 @@
     wget git tree
     zip unzip p7zip gzip bzip2 xz zstd
     unrar usbutils
+    libreoffice
   ];
 
   programs.nano.enable = false;

@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono   # 아이콘용
+    nerd-fonts.jetbrains-mono   
   ];
 
   programs.waybar = {

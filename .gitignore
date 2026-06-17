@@ -1,4 +1,8 @@
 result
 result-*
+*~
+\#*\#
+.#*
 *.swp
+*.bak
 .update-logs/

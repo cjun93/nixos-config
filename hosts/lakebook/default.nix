@@ -1,4 +1,3 @@
-# lakebook (laptop) - NVIDIA 없음, DE 잠정 XFCE
 { pkgs, ... }:
 {
   imports = [
@@ -9,9 +8,13 @@
     ../../modules/i18n.nix
     ../../modules/users.nix
     ../../modules/thunar.nix
-    ./desktop.nix   # XFCE 확정 후 작성하여 활성화
+    ./desktop.nix   
   ];
 
+  environment.systemPackages = with pkgs; [
+    xpad
+  ];
+  
   networking.hostName = "lakebook";
 
   system.stateVersion = "26.05";
