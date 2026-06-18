@@ -1,8 +1,14 @@
-# integrity home-manager 골격: 공통만. DE 확정 후 DE 설정 추가
-{ ... }: {
+{ inputs, ... }: {
   imports = [
     ./common.nix
-    # ./waybar.nix   # Hyprland 확정 시 활성화
+    inputs.plasma-manager.homeModules.plasma-manager
   ];
-  # TODO: integrity DE 설정 (모니터 배치 등)
+  
+  programs.plasma = {
+    enable = true;
+
+    configFile."kwinrc"."Wayland"."VirtualKeyboardEnabled" = true;
+    configFile."kwinrc"."Wayland"."InputMethod" =
+      "/run/current-system/sw/share/applications/org.fcitx.Fcitx5.desktop";
+  };  
 }

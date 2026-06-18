@@ -1,4 +1,3 @@
-# columbia DE: Hyprland (시스템 계층)
 { pkgs, ... }:
 {
   services.xserver.enable = true;

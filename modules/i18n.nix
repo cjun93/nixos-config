@@ -1,4 +1,3 @@
-# 공통 로케일 + 한글 입력기(fcitx5-hangul) + 폰트
 { pkgs, ... }:
 {
   time.timeZone = "Asia/Seoul";
@@ -16,13 +15,11 @@
     LC_TIME           = "ko_KR.UTF-8";
   };
 
-  # X11 키맵
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
 
-  # 한글 입력기 (시스템 계층, NixOS i18n.inputMethod)
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";

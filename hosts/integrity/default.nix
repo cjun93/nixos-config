@@ -1,4 +1,3 @@
-# integrity (home pc) - NVIDIA + DE 미확정(잠정 Hyprland)
 { pkgs, ... }:
 {
   imports = [
