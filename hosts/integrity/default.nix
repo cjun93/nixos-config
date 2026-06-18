@@ -10,7 +10,7 @@
     ../../modules/users.nix
     ../../modules/thunar.nix
     ../../modules/nvidia.nix
-    # ./desktop.nix   # DE 확정 후 작성하여 활성화
+    ./desktop.nix 
   ];
 
   networking.hostName = "integrity";
