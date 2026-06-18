@@ -10,7 +10,7 @@
     ../../modules/thunar.nix
     ./desktop.nix   
   ];
-
+  boot.kernelParams = [ "i915.force_probe=9841" ];
   environment.systemPackages = with pkgs; [
     xpad
   ];
