@@ -11,9 +11,8 @@
     wget git tree
     zip unzip p7zip gzip bzip2 xz zstd
     unrar usbutils
-    libreoffice vaultwarden nextcloud-client
+    libreoffice nextcloud-client
     obsidian
   ];
-
   programs.nano.enable = false;
 }
