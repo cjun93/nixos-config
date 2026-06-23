@@ -3,27 +3,22 @@
   services.xserver.enable = true;
   services.displayManager.sddm = {
     enable = true;
-    wayland.enable = false;
+    wayland.enable = true;
   };
 
-  programs.hyprland = {
+  services.desktopManager.plasma6.enable = true;
+  services.ollama = {
     enable = true;
-    xwayland.enable = true;
+    package = pkgs.ollama-cuda;
+    environmentVariables = {
+      CUDA_VISIBLE_DEVICES = "GPU-649cd548-cb71-cd40-5505-b11554d1d54c";
+    };
   };
-
-  # NVIDIA + Wayland 환경 변수
-  environment.sessionVariables = {
-    LIBVA_DRIVER_NAME = "nvidia";
-    GBM_BACKEND = "nvidia-drm";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    NIXOS_OZONE_WL = "1";
-  };
-
+  
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
-      xdg-desktop-portal-hyprland
     ];
   };
 }
