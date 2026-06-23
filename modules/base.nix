@@ -12,7 +12,7 @@
     zip unzip p7zip gzip bzip2 xz zstd
     unrar usbutils
     libreoffice nextcloud-client
-    obsidian
+    obsidian bind
   ];
   programs.nano.enable = false;
 }
