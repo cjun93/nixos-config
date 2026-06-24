@@ -11,6 +11,10 @@
     ./desktop.nix   
   ];
   boot.kernelParams = [ "i915.force_probe=9841" ];
+
+  boot.blacklistedKernelModules = [ "ufshcd_pci" "ufshcd_core" ];
+
+  swapDevices = [{ device = "/swap/swapfile"; }];
   environment.systemPackages = with pkgs; [
     xpad
   ];
