@@ -1,4 +1,3 @@
-# columbia (office pc) - NVIDIA + Hyprland
 { pkgs, ... }:
 {
   imports = [
